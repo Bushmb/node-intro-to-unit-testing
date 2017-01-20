@@ -2,6 +2,9 @@ module.exports = function(num) {
 	if (typeof num !== 'number') {
 		throw Error('`num` must be a number');
 	}
+	if (Math.floor(num) !== num) {
+		throw Error('`num` must be whole');	
+	}
 	if (num % 15 === 0) {
 		return 'fizz-buzz';
 	}
